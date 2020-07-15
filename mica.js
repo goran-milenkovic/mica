@@ -146,7 +146,6 @@ function mousePressed() {
                                 for (let hasPoint in pointsFirstPlayer)
                                     if (pointsFirstPlayer[hasPoint])
                                         for (let point in upperDownLeftRight[hasPoint]) {
-                                            // console.log(upperDownLeftRight[hasPoint][point]);
                                             if (upperDownLeftRight[hasPoint][point] != -1 && takenFields[upperDownLeftRight[hasPoint][point]] == false)
                                                 hasFieldToMoveFirstPlayer = true
                                         }
@@ -178,7 +177,6 @@ function mousePressed() {
                             for (let hasPoint in pointsFirstPlayer)
                                 if (pointsFirstPlayer[hasPoint])
                                     for (let point in upperDownLeftRight[hasPoint]) {
-                                        // console.log(upperDownLeftRight[hasPoint][point]);
                                         if (upperDownLeftRight[hasPoint][point] != -1 && takenFields[upperDownLeftRight[hasPoint][point]] == false)
                                             hasFieldToMoveFirstPlayer = true
                                     }
@@ -213,7 +211,6 @@ function mousePressed() {
                             //treba da mu pojede drugi igrac
                             timeToEat = true
                             info = "Crveni uzmi plavu"
-                            //console.log(timeToEat);
                             eatFirst = true
                         }
                         else {
@@ -227,7 +224,6 @@ function mousePressed() {
                         pointsSecondPlayer[i] = true
                         secondPlayerChosenPoints++
                         secondPlayerStep++
-                        //console.log(secondPlayerStep);
                         if ((pointsSecondPlayer[triple[i][0][0]] && pointsSecondPlayer[triple[i][0][1]]) ||
                             (pointsSecondPlayer[triple[i][1][0]] && pointsSecondPlayer[triple[i][1][1]])) {
                             if (secondPlayerStep == 10) {
@@ -244,7 +240,6 @@ function mousePressed() {
                             for (let hasPoint in pointsFirstPlayer)
                                 if (pointsFirstPlayer[hasPoint])
                                     for (let point in upperDownLeftRight[hasPoint]) {
-                                        // console.log(upperDownLeftRight[hasPoint][point]);
                                         if (upperDownLeftRight[hasPoint][point] != -1 && takenFields[upperDownLeftRight[hasPoint][point]] == false)
                                             hasFieldToMoveFirstPlayer = true
                                     }
@@ -285,7 +280,6 @@ function mousePressed() {
                         //treba da mu pojede drugi igrac
                         timeToEat = true
                         info = "Crveni uzmi plavu"
-                        //console.log(timeToEat);
                         eatFirst = true
                     }
                     else
@@ -311,7 +305,6 @@ function mousePressed() {
                         //treba da mu pojede drugi igrac
                         timeToEat = true
                         info = "Plavi uzmi crvenu"
-                        //console.log(timeToEat);
                         eatFirst = false
                     }
                     else
@@ -362,14 +355,11 @@ function keyPressed() {
         }
     }
     if (satisfactoryArrow) {
-        //pogledaj da li protivnik ima mogucnost da odigra nesto
-        //ako nema onda kraj partije
         //prolazimo kroz sve njegove aktivne i trazimo jednu koja ima suseda da nije -1 i da nije zauzeta
         if (firstPlayerTurn) {
             for (let hasPoint in pointsFirstPlayer)
                 if (pointsFirstPlayer[hasPoint])
                     for (let point in upperDownLeftRight[hasPoint]) {
-                        console.log(upperDownLeftRight[hasPoint][point]);
                         if (upperDownLeftRight[hasPoint][point] != -1 && takenFields[upperDownLeftRight[hasPoint][point]] == false)
                             hasFieldToMoveFirstPlayer = true
                     }
@@ -380,7 +370,6 @@ function keyPressed() {
             for (let hasPoint in pointsSecondPlayer)
                 if (pointsSecondPlayer[hasPoint])
                     for (let point in upperDownLeftRight[hasPoint]) {
-                        console.log(upperDownLeftRight[hasPoint][point]);
                         if (upperDownLeftRight[hasPoint][point] != -1 && takenFields[upperDownLeftRight[hasPoint][point]] == false)
                             hasFieldToMoveSecondPlayer = true
                     }
